@@ -1,0 +1,11 @@
+<div class="center">
+    <button class="btn btn-lg blue center" (click)="openSlideshow()">Open Slideshow</button>
+</div>
+
+<div class="grid">
+    <div *ngFor="let img of images; let i = index;">
+        <img [src]="img.src" (click)="openImage(i)" style="width: 300px" alt="img">
+    </div>
+</div>
+
+<app-photo-swipe #photoSwipe></app-photo-swipe>
